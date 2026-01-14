@@ -25,7 +25,7 @@ web/
 │   ├── *.jpg, *.png, *.jpeg, *.webp, *.avif
 │   └── cafe2.mp4
 │
-├── index.html             # Entry point - User authentication
+├── login.html             # Entry point - User authentication
 ├── login.js                # Login functionality
 │
 ├── cafe-selection.html     # Cafe selection page (Red/Blue/Dough)
@@ -55,7 +55,7 @@ web/
 
 1. **Download** the entire project folder with all files and the `assets` folder
 2. **Open** `index.html` in any modern web browser (Chrome, Firefox, Edge, Safari)
-3. **Login** with your credentials
+3. **Login** with your credentials (make sure to use @nu.edu.pk or @isb.nu.edu.pk at the end)
 4. **Select** a cafe (Red, Blue, or Dough)
 5. **Browse** the menu and add items to your cart
 6. **Checkout** when ready
@@ -80,3 +80,6 @@ web/
 ---
 
 **Developed for FAST NUCES Campus Cafe** 🍽️
+
+
+
