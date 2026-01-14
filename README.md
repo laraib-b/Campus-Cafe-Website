@@ -72,17 +72,11 @@ web/
 - **Fonts**: Google Fonts (Poppins)
 - **Storage**: LocalStorage (for cart and user session)
 
-## Benefits
-
-✅ **Time Saving**: Students can order ahead and skip queues  
-✅ **Better Network**: Order from anywhere with stable internet  
-✅ **Convenience**: Browse menus at your own pace  
-✅ **Efficiency**: Reduces congestion at the cafe during peak hours  
-✅ **User-Friendly**: Simple, intuitive interface
 
 ---
 
 **Developed for FAST NUCES Campus Cafe** 🍽️
+
 
 
 
