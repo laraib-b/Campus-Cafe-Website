@@ -3,7 +3,7 @@
 A web-based ordering system designed for FAST NUCES Campus Cafe to streamline food ordering and eliminate long queues.
 
 ## Link: 
-`https://laraib-b.github.io/Campus-Cafe-Website/`
+https://laraib-b.github.io/Campus-Cafe-Website/
 
 ## Problem Statement
 
@@ -83,6 +83,7 @@ web/
 ---
 
 **Developed for FAST NUCES Campus Cafe** 🍽️
+
 
 
 
