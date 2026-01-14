@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Red Menu - FAST NUCES Campus Cafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-red">
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Cafe Logo" class="logo-image">
+            </div>
+            <nav class="main-nav">
+                <a href="cafe-selection.html" class="nav-link" title="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+                <div class="cart-info">
+                    <button id="cartBtn" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cartCount">0</span>
+                    </button>
+                </div>
+                <button id="logoutBtn" class="logout-btn" title="Logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Menu Page -->
+    <div id="menuPage" class="page active">
+        <div class="menu-container">
+            <div class="menu-header">
+                <button onclick="goBack()" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Cafes
+                </button>
+                <div class="menu-title">
+                    <h1>Cafe Red ❤️</h1>
+                    <p>Traditional Pakistani cuisine with fresh ingredients</p>
+                </div>
+            </div>
+
+            <div class="menu-content">
+                <div class="menu-categories" id="menuCategories">
+                    <button class="category-btn active" data-category="eatables">Eatables</button>
+                    <button class="category-btn" data-category="drinks">Drinks</button>
+                </div>
+                
+                <div class="menu-items" id="menuItems">
+                    <!-- Menu items will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-coffee"></i> FAST Cafe</h3>
+                <p>Order your fav food online and avoid standing in queues!</p>
+            </div>
+            <div class="footer-section">
+                <!-- <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="cafe-selection.html">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li> -->
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/laraib-butt-9a6a18325" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 FAST Cafe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Variation Selection Modal -->
+    <div id="variationModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-list"></i> Select Variation</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="variationContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Modal -->
+    <div id="notificationModal" class="modal">
+        <div class="modal-content notification-content">
+            <div class="modal-body">
+                <div id="notificationText"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - FAST NUCES Campus Cafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="page active">
+        <div class="login-background">
+            <video autoplay muted loop playsinline>
+                <source src="cafe2.mp4" type="video/mp4">
+                <!-- <source src="cafe2.webm" type="video/webm"> -->
+                <!-- Fallback for browsers that don't support video -->
+                Your browser does not support the video tag.
+            </video>
+            <div class="login-overlay"></div>
+        </div>
+        
+        <div class="login-container">
+            <div class="login-card">
+                <div class="login-header">
+                    <div class="login-logo">
+                        <img src="assets/logo.png" alt="Cafe Logo" class="logo-image">
+                    </div>
+                    <p>Sign in with your university credentials</p>
+                </div>
+                
+                <div class="role-selection">
+                    <button class="role-btn active" data-role="student">
+                        <i class="fas fa-graduation-cap"></i>
+                        Student
+                    </button>
+                    <button class="role-btn" data-role="teacher">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        Teacher
+                    </button>
+                </div>
+                
+                <form id="loginForm" class="login-form">
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="Enter your university email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="login-btn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Sign In
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

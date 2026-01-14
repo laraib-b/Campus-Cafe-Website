@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - FAST NUCES Campus Cafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Cafe Logo" class="logo-image">
+            </div>
+            <nav class="main-nav">
+                <a href="cafe-selection.html" class="nav-link" title="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+                <div class="cart-info">
+                    <button id="cartBtn" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cartCount">0</span>
+                    </button>
+                </div>
+                <button id="logoutBtn" class="logout-btn" title="Logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Checkout Page -->
+    <div id="checkoutPage" class="page active">
+        <div class="checkout-container">
+            <div class="checkout-header">
+                <button onclick="goBack()" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Menu
+                </button>
+                <h1>Checkout</h1>
+            </div>
+
+            <div class="checkout-content">
+                <div class="cart-section">
+                    <h2>Your Order</h2>
+                    <div id="cartItems"></div>
+                    <div class="cart-summary">
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">Rs. 0</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total:</span>
+                            <span id="total">Rs. 0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-section">
+                    <h2>Payment Options</h2>
+                    <div class="payment-options">
+                        <button class="payment-btn" data-payment="online">
+                            <i class="fas fa-mobile-alt"></i>
+                            Online Payment
+                        </button>
+                        <button class="payment-btn" data-payment="cash">
+                            <i class="fas fa-money-bill-wave"></i>
+                            Cash on Pickup
+                        </button>
+                    </div>
+                    <div class="input-group" style="margin-top: 1rem;">
+                        <i class="fas fa-comment-dots"></i>
+                        <input type="text" id="orderNotes" placeholder="Any additional notes for the cafe (optional)" maxlength="400">
+                    </div>
+                    
+                    <div id="onlinePaymentOptions" class="hidden">
+                        <h3>Select Payment Method</h3>
+                        <div id="walletOptions"></div>
+                    </div>
+
+                    <div style="margin-top:1.25rem; text-align:center;">
+                        <button id="confirmAllBtn" class="checkout-btn">
+                            <i class="fas fa-receipt"></i>
+                            Confirm & Generate Summaries
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-coffee"></i> FAST Cafe</h3>
+                <p>Order your fav food online and avoid standing in queues!</p>
+            </div>
+            <div class="footer-section">
+                <!-- <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="cafe-selection.html">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li> -->
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/laraib-butt-9a6a18325" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 FAST Cafe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Order Confirmation Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-check-circle"></i> Order Confirmed!</h2>
+            </div>
+            <div class="modal-body">
+                <div id="orderDetails"></div>
+            </div>
+            <div class="modal-footer">
+                <button id="newOrderBtn" class="new-order-btn">
+                    <i class="fas fa-plus"></i>
+                    Place New Order
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Modal -->
+    <div id="notificationModal" class="modal">
+        <div class="modal-content notification-content">
+            <div class="modal-body">
+                <div id="notificationText"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

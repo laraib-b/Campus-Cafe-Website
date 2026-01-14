@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Selection - FAST NUCES Campus Cafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Cafe Logo" class="logo-image">
+            </div>
+            <nav class="main-nav">
+                <a href="cafe-selection.html" class="nav-link" title="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+                <div class="cart-info">
+                    <button id="cartBtn" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cartCount">0</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cafe Selection Page -->
+    <div id="cafeSelectionPage" class="page active">
+        <div class="cafe-selection-container">
+            <div class="page-header">
+                <h1>Choose Your Cafe ✨</h1>
+                <p>Select a cafe to view menu and place your order</p>
+                <div class="user-info">
+                    <i class="fas fa-user"></i>
+                    <span id="userName">Welcome, User</span>
+                    <button id="logoutBtn" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Logout
+                    </button>
+                </div>
+            </div>
+            
+            <div class="cafe-cards">
+                <div class="cafe-card red-cafe" onclick="selectCafe('red')">
+                    <div class="cafe-image">
+                        <img src="assets/redcafe.jpeg" alt="Cafe Red" onerror="this.style.display='none'">
+                        <!-- <div class="cafe-overlay red-overlay">
+                            <i class="fas fa-coffee"></i>
+                        </div> -->
+                    </div>
+                    <div class="cafe-info">
+                        <h2>Cafe Red</h2>
+                        <p>Traditional Pakistani cuisine with fresh ingredients</p>
+                        <div class="cafe-features">
+                            <span><i class="fas fa-utensils"></i> Eatables</span>
+                            <span><i class="fas fa-coffee"></i> Drinks</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cafe-card blue-cafe" onclick="selectCafe('blue')">
+                    <div class="cafe-image">
+                        <img src="assets/cafeblue.jpeg" alt="Cafe Blue" onerror="this.style.display='none'">
+                        <!-- <div class="cafe-overlay blue-overlay">
+                            <i class="fas fa-coffee"></i>
+                        </div> -->
+                    </div>
+                    <div class="cafe-info">
+                        <h2>Cafe Blue</h2>
+                        <p>International cuisine and modern dining experience</p>
+                        <div class="cafe-features">
+                            <span><i class="fas fa-utensils"></i> Eatables</span>
+                            <span><i class="fas fa-coffee"></i> Drinks</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cafe-card green-cafe" onclick="selectCafe('dough')">
+                    <div class="cafe-image">
+                        <img src="assets/donut1.jpeg" alt="Dough with the Flow" onerror="this.style.display='none'">
+                            <!-- <div class="cafe-overlay green-overlay">
+                                <i class="fas fa-cookie-bite"></i>
+                            </div> -->
+                    </div>
+                    <div class="cafe-info">
+                        <h2>Dough with the Flow</h2>
+                        <p>Fresh baked goods, donuts, and sweet treats</p>
+                        <div class="cafe-features">
+                            <span><i class="fas fa-cookie-bite"></i> Donuts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-coffee"></i> FAST Cafe</h3>
+                <p>Order your fav food online and avoid standing in queues!</p>
+            </div>
+            <div class="footer-section">
+                <!-- <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="cafe-selection.html">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li> -->
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/laraib-butt-9a6a18325" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 FAST Cafe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="cafe-selection.js"></script>
+</body>
+</html>
